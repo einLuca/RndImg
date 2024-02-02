@@ -1,0 +1,31 @@
+<div class="container mx-auto text-center">
+  <input (input)="newTopic()" name="thema" type="text" required
+         class="flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm sm:text-sm sm:leading-6 p-6"
+         placeholder="Bild Thema eingeben" [formControl]="topicImg">
+  <input id="res" type="text" required
+         class="flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm sm:text-sm sm:leading-6 p-6"
+         placeholder="Custom Resolution" [formControl]="resolution">
+</div>
+
+<div class="container mx-auto text-center">
+  <button class="btn glass btn-successS" (click)="newImg()">Neues Bild</button>
+</div>
+<div class="hero">
+  <img [src]="savedImageUrls[0]" id="yourImgId" alt="alt tags are key!"/>
+</div>
+
+
+
+<div class="text-center bg-base-200 flex-col">
+  <div class="text-3xl p-6">Zuletzt angesehene Bilder:</div>
+  <div class="hero-overlay grid grid-cols-3 bg-base-200 mx-auto justify-center items-center">
+    <img [src]="savedImageUrls[1]" id="yourImgId1" [width]="window.innerWidth/4" alt="alt tags are key!" class="mx-auto"/>
+    <img [src]="savedImageUrls[2]" id="yourImgId2" [width]="window.innerWidth/4" alt="alt tags are key!" class="mx-auto"/>
+    <img [src]="savedImageUrls[3]" id="yourImgId3" [width]="window.innerWidth/4" alt="alt tags are key!" class="mx-auto"/>
+    <a [href]="savedImageUrls[1]" class="text-2xl p-3"> Click me!</a>
+    <a [href]="savedImageUrls[1]" class="text-2xl p-3"> Click me!</a>
+    <a [href]="savedImageUrls[1]" class="text-2xl p-3"> Click me!</a>
+  </div>
+</div>
+
+

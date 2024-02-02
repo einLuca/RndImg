@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+<div class="hero bg-base-200">
+  <div class="hero-content flex-col lg:flex-row-reverse text-center">
+    <div>
+      <div class="text-6xl p-6">Willkommen</div>
+      <div class="text-3xl p-6">Wie fühlst du dich?</div>
+      <input id="res" type="text" [formControl]="feelingForm" required
+             class="flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm sm:text-sm sm:leading-6 p-6"
+             placeholder="Dein Gefühl">
+      @if (feelingForm.value) {
+        <button class="btn btn-ghost text-xl py-0" (click)="onClick()">Bestätigen</button>
+      }
+    </div>
+  </div>
+</div>
+
+<div class="text-center bg-base-200 flex-col">
+  <div class="text-3xl p-6">Zuletzt angeklickte Gefühlsbilder:</div>
+  <div class="hero-overlay grid grid-cols-3 bg-base-200">
+    <img [src]="selectedImageUrl[0]" id="yourImgId1" [width]="window.innerWidth/4" alt="" class="mx-auto"/>
+    <img [src]="selectedImageUrl[1]" id="yourImgId2" [width]="window.innerWidth/4" alt="" class="mx-auto"/>
+    <img [src]="selectedImageUrl[2]" id="yourImgId3" [width]="window.innerWidth/4" alt="" class="mx-auto"/>
+  </div>
+</div>
+

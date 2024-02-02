@@ -1,0 +1,8 @@
+
+<div class="grid-container" (scroll)="onScroll($event)">
+  @for (imageUrl of imageUrls; track $index;) {
+    <div>
+      <img [src]="imageUrl" id="yourImgId{{$index}}" [width]="(window.innerWidth/4)-8" alt="alt tags are key!" (click)="onClick(imageUrl)"/>
+    </div>
+  }
+</div>
